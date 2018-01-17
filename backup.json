@@ -1,0 +1,38 @@
+{
+    "backup":[
+        {
+            "dbType": "postgresql",
+            "dbDumpPath": "/usr/local/Cellar/postgresql/9.6.3/bin/pg_dump",
+            "host": "localhost",
+            "port": "5432",
+            "dbName": "mydb",
+            "user": "postgres",
+            "password": "1234",
+            "backupPath": "./backup_mydb",
+            "backupFileName": "mydb"
+        },
+        {
+            "dbType": "mysql",
+            "dbDumpPath": "/usr/local/mysql/bin/mysqldump",
+            "host": "localhost",
+            "port": "3306",
+            "dbName": "mydb2",
+            "user": "root",
+            "password": "1234",
+            "backupPath": "./backup_mydb2",
+            "backupFileName": "mydb2"
+        }
+    ],
+    "backupEveryDaysHours": "0,12",
+    "deleteBackupDaysAgo": 30,
+    "addressee": [
+        "xx@xx.com"
+    ],
+    "addresser": {
+        "server": "smtp.xx.com",
+        "sslPort": "465",
+        "user": "xx@xx.com",
+        "password": "",
+        "allow": false
+    }
+}
