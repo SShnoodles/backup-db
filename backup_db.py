@@ -96,7 +96,6 @@ def backup_db():
         if os.system(cmd) == 0:
             logging.info("backup db success command => {}".format(cmd))
         else:
-            # 发送邮件
             if addresser[ADDRESSER_Allow]:
                 if not send_mail('backup db failed!!!', 'backup {} db failed！'.format(','.join(names))):
                     logging.info('send email failed, title => {}, text => {}'.format('backup db failed!!!', 'backup {} db failed！'.format(','.join(names))))
@@ -130,7 +129,6 @@ def start():
 def my_listener(event):
     if event.exception:
         logging.info('The job crashed :(, {}'.format(event.exception))
-        # 发送邮件
         names = []
         for b in backup:
             names.append(b[BACKUP_DB_NAME])
