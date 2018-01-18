@@ -6,6 +6,14 @@ backup db 1.0
 - default file suffix name *.sql*
 - the backup file cannot to directly import, like Navicat
 
+## Features
+
+- [x] Python3
+- [x] Multiple data sources, Mysql or Postgresql
+- [x] Timing backup
+- [x] Delete old files
+- [x] Error Send Email
+
 ## Before
 
 pip install apscheduler
